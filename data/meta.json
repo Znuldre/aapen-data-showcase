@@ -1,0 +1,809 @@
+{
+ "versjon": "0.1.0",
+ "generert": "2026-10-23T23:46:33+00:00",
+ "referansedager": {
+  "hverdag": "2026-11-10",
+  "lordag": "2026-11-14"
+ },
+ "tidsvinduer": {
+  "morgen": {
+   "navn": "Hverdag 07–08",
+   "dato": "2026-11-10",
+   "start": "07:00",
+   "minutter": 60
+  },
+  "kveld": {
+   "navn": "Hverdag 19–20",
+   "dato": "2026-11-10",
+   "start": "19:00",
+   "minutter": 60
+  },
+  "lordag": {
+   "navn": "Lørdag 10–11",
+   "dato": "2026-11-14",
+   "start": "10:00",
+   "minutter": 60
+  }
+ },
+ "kategorier": {
+  "jobber": {
+   "vekt": 0.3,
+   "halveringstid": 30,
+   "maal": 100000,
+   "navn": "Arbeidsplasser"
+  },
+  "dagligvare": {
+   "vekt": 0.15,
+   "halveringstid": 10,
+   "maal": 3,
+   "navn": "Dagligvare"
+  },
+  "skole": {
+   "vekt": 0.15,
+   "halveringstid": 15,
+   "maal": 3,
+   "navn": "Skoler"
+  },
+  "barnehage": {
+   "vekt": 0.1,
+   "halveringstid": 10,
+   "maal": 5,
+   "navn": "Barnehager"
+  },
+  "helse": {
+   "vekt": 0.15,
+   "halveringstid": 20,
+   "maal": 5,
+   "navn": "Helse"
+  },
+  "tjenester": {
+   "vekt": 0.15,
+   "halveringstid": 20,
+   "maal": 5,
+   "navn": "Tjenester"
+  }
+ },
+ "parametere": {
+  "maks_reisetid": 90,
+  "lav_samlet_rekkevidde": 5.0,
+  "gangavstand_lav_kapasitet": 500,
+  "gangavstand_hoy_kapasitet": 1000,
+  "kollektivnivaa_grenser": [
+   1,
+   2,
+   4,
+   8,
+   16,
+   32
+  ]
+ },
+ "skalaer": {
+  "dk": [
+   [
+    "A",
+    70
+   ],
+   [
+    "B",
+    55
+   ],
+   [
+    "C",
+    45
+   ],
+   [
+    "D",
+    30
+   ],
+   [
+    "E",
+    22
+   ],
+   [
+    "F",
+    15
+   ],
+   [
+    "G",
+    0
+   ]
+  ],
+  "no": [
+   [
+    "A",
+    75.64544255909519
+   ],
+   [
+    "B",
+    70.92154825498886
+   ],
+   [
+    "C",
+    59.42710360332383
+   ],
+   [
+    "D",
+    38.48851021337701
+   ],
+   [
+    "E",
+    16.48179141343643
+   ],
+   [
+    "F",
+    2.5022179491359378
+   ],
+   [
+    "G",
+    0.0
+   ]
+  ]
+ },
+ "norge": {
+  "mf_morgen": 51.15090203605736,
+  "kk_morgen": 70.91962290518812,
+  "tv_morgen": 31.38218116692659,
+  "avganger_morgen": 23.574418693746434,
+  "mf_kveld": 44.086311579133934,
+  "kk_kveld": 62.728882761717614,
+  "tv_kveld": 25.443740396550268,
+  "avganger_kveld": 14.796774825327057,
+  "mf_lordag": 43.961667201999084,
+  "kk_lordag": 62.7326861369373,
+  "tv_lordag": 25.190648267060865,
+  "avganger_lordag": 12.668628761009032,
+  "andel_god_tilgang": 0.7994650070499338,
+  "andel_naer_holdeplass": 0.9209066522875228,
+  "andel_A": 0.32456674593814244,
+  "andel_B": 0.22858130553747422,
+  "andel_C": 0.09762314469300026,
+  "andel_D": 0.10857900687950378,
+  "andel_E": 0.05483946272987475,
+  "andel_F": 0.045073209750033476,
+  "andel_G": 0.14073712447197106,
+  "befolkning": 5585868,
+  "gini_morgen": 0.2759462956722758,
+  "karakter_dk_morgen": "C"
+ },
+ "transport_performance": [
+  {
+   "bysenter": 89,
+   "kommunenummer": "0301",
+   "befolkning": 933790,
+   "transport_performance": 0.2833,
+   "naadd_30_min": 130798,
+   "innen_7_5_km": 420148,
+   "navn": "Oslo - Oslove"
+  },
+  {
+   "bysenter": 157,
+   "kommunenummer": "5001",
+   "befolkning": 184051,
+   "transport_performance": 0.3173,
+   "naadd_30_min": 51874,
+   "innen_7_5_km": 163785,
+   "navn": "Trondheim - Tråante"
+  },
+  {
+   "bysenter": 120,
+   "kommunenummer": "4601",
+   "befolkning": 134596,
+   "transport_performance": 0.3124,
+   "naadd_30_min": 54567,
+   "innen_7_5_km": 171130,
+   "navn": "Bergen"
+  },
+  {
+   "bysenter": 37,
+   "kommunenummer": "1103",
+   "befolkning": 106187,
+   "transport_performance": 0.3742,
+   "naadd_30_min": 57251,
+   "innen_7_5_km": 153994,
+   "navn": "Stavanger"
+  },
+  {
+   "bysenter": 28,
+   "kommunenummer": "1108",
+   "befolkning": 51490,
+   "transport_performance": 0.2786,
+   "naadd_30_min": 28834,
+   "innen_7_5_km": 103167,
+   "navn": "Sandnes"
+  }
+ ],
+ "fylker": [
+  {
+   "nr": "03",
+   "navn": "Oslo - Oslove",
+   "befolkning": 722376,
+   "bbox": [
+    10.5557,
+    59.8137,
+    10.9503,
+    60.1202
+   ],
+   "mf_morgen": 75.86,
+   "kk_morgen": 99.88,
+   "tv_morgen": 51.84,
+   "avganger_morgen": 78.85,
+   "mf_kveld": 74.56,
+   "kk_kveld": 99.84,
+   "tv_kveld": 49.28,
+   "avganger_kveld": 60.2,
+   "mf_lordag": 74.4,
+   "kk_lordag": 99.83,
+   "tv_lordag": 48.97,
+   "avganger_lordag": 51.77,
+   "karakter_dk_morgen": "A",
+   "karakter_no_morgen": "A",
+   "karakter_dk_kveld": "A",
+   "karakter_no_kveld": "B",
+   "karakter_dk_lordag": "A",
+   "karakter_no_lordag": "B",
+   "andel_god_tilgang": 0.9968,
+   "gini_morgen": 0.0308
+  },
+  {
+   "nr": "11",
+   "navn": "Rogaland",
+   "befolkning": 503701,
+   "bbox": [
+    4.8777,
+    58.279,
+    6.9257,
+    59.6959
+   ],
+   "mf_morgen": 57.72,
+   "kk_morgen": 76.41,
+   "tv_morgen": 39.03,
+   "avganger_morgen": 17.46,
+   "mf_kveld": 51.24,
+   "kk_kveld": 70.16,
+   "tv_kveld": 32.31,
+   "avganger_kveld": 10.12,
+   "mf_lordag": 50.24,
+   "kk_lordag": 69.53,
+   "tv_lordag": 30.96,
+   "avganger_lordag": 7.63,
+   "karakter_dk_morgen": "B",
+   "karakter_no_morgen": "D",
+   "karakter_dk_kveld": "C",
+   "karakter_no_kveld": "D",
+   "karakter_dk_lordag": "C",
+   "karakter_no_lordag": "D",
+   "andel_god_tilgang": 0.8238,
+   "gini_morgen": 0.2162
+  },
+  {
+   "nr": "15",
+   "navn": "Møre og Romsdal",
+   "befolkning": 272027,
+   "bbox": [
+    5.3501,
+    61.9307,
+    9.1642,
+    63.5206
+   ],
+   "mf_morgen": 36.38,
+   "kk_morgen": 47.41,
+   "tv_morgen": 25.36,
+   "avganger_morgen": 8.19,
+   "mf_kveld": 29.03,
+   "kk_kveld": 38.61,
+   "tv_kveld": 19.45,
+   "avganger_kveld": 3.41,
+   "mf_lordag": 28.16,
+   "kk_lordag": 38.13,
+   "tv_lordag": 18.19,
+   "avganger_lordag": 2.77,
+   "karakter_dk_morgen": "D",
+   "karakter_no_morgen": "E",
+   "karakter_dk_kveld": "E",
+   "karakter_no_kveld": "E",
+   "karakter_dk_lordag": "E",
+   "karakter_no_lordag": "E",
+   "andel_god_tilgang": 0.7123,
+   "gini_morgen": 0.3776
+  },
+  {
+   "nr": "18",
+   "navn": "Nordland - Nordlánnda",
+   "befolkning": 243293,
+   "bbox": [
+    11.8092,
+    64.9817,
+    17.758,
+    69.3239
+   ],
+   "mf_morgen": 35.28,
+   "kk_morgen": 46.04,
+   "tv_morgen": 24.53,
+   "avganger_morgen": 7.09,
+   "mf_kveld": 27.02,
+   "kk_kveld": 36.1,
+   "tv_kveld": 17.95,
+   "avganger_kveld": 2.67,
+   "mf_lordag": 26.46,
+   "kk_lordag": 35.71,
+   "tv_lordag": 17.21,
+   "avganger_lordag": 1.83,
+   "karakter_dk_morgen": "D",
+   "karakter_no_morgen": "E",
+   "karakter_dk_kveld": "E",
+   "karakter_no_kveld": "E",
+   "karakter_dk_lordag": "E",
+   "karakter_no_lordag": "E",
+   "andel_god_tilgang": 0.6446,
+   "gini_morgen": 0.3957
+  },
+  {
+   "nr": "31",
+   "navn": "Østfold",
+   "befolkning": 313874,
+   "bbox": [
+    10.589,
+    58.8798,
+    11.818,
+    59.7646
+   ],
+   "mf_morgen": 44.35,
+   "kk_morgen": 70.31,
+   "tv_morgen": 18.38,
+   "avganger_morgen": 12.83,
+   "mf_kveld": 32.9,
+   "kk_kveld": 54.65,
+   "tv_kveld": 11.15,
+   "avganger_kveld": 4.8,
+   "mf_lordag": 32.29,
+   "kk_lordag": 53.6,
+   "tv_lordag": 10.99,
+   "avganger_lordag": 4.4,
+   "karakter_dk_morgen": "D",
+   "karakter_no_morgen": "D",
+   "karakter_dk_kveld": "D",
+   "karakter_no_kveld": "E",
+   "karakter_dk_lordag": "D",
+   "karakter_no_lordag": "E",
+   "andel_god_tilgang": 0.8126,
+   "gini_morgen": 0.2281
+  },
+  {
+   "nr": "32",
+   "navn": "Akershus",
+   "befolkning": 739505,
+   "bbox": [
+    10.315,
+    59.4875,
+    11.8652,
+    60.5883
+   ],
+   "mf_morgen": 61.51,
+   "kk_morgen": 89.73,
+   "tv_morgen": 33.29,
+   "avganger_morgen": 19.08,
+   "mf_kveld": 54.28,
+   "kk_kveld": 82.26,
+   "tv_kveld": 26.3,
+   "avganger_kveld": 11.55,
+   "mf_lordag": 54.03,
+   "kk_lordag": 82.33,
+   "tv_lordag": 25.72,
+   "avganger_lordag": 9.55,
+   "karakter_dk_morgen": "B",
+   "karakter_no_morgen": "C",
+   "karakter_dk_kveld": "C",
+   "karakter_no_kveld": "D",
+   "karakter_dk_lordag": "C",
+   "karakter_no_lordag": "D",
+   "andel_god_tilgang": 0.8686,
+   "gini_morgen": 0.1449
+  },
+  {
+   "nr": "33",
+   "navn": "Buskerud",
+   "befolkning": 270942,
+   "bbox": [
+    7.8414,
+    59.4634,
+    10.4739,
+    60.9419
+   ],
+   "mf_morgen": 44.77,
+   "kk_morgen": 69.96,
+   "tv_morgen": 19.58,
+   "avganger_morgen": 12.26,
+   "mf_kveld": 35.94,
+   "kk_kveld": 58.59,
+   "tv_kveld": 13.3,
+   "avganger_kveld": 5.91,
+   "mf_lordag": 35.65,
+   "kk_lordag": 57.81,
+   "tv_lordag": 13.49,
+   "avganger_lordag": 5.36,
+   "karakter_dk_morgen": "D",
+   "karakter_no_morgen": "D",
+   "karakter_dk_kveld": "D",
+   "karakter_no_kveld": "E",
+   "karakter_dk_lordag": "D",
+   "karakter_no_lordag": "E",
+   "andel_god_tilgang": 0.7991,
+   "gini_morgen": 0.2915
+  },
+  {
+   "nr": "34",
+   "navn": "Innlandet",
+   "befolkning": 377200,
+   "bbox": [
+    7.6271,
+    59.8832,
+    12.8209,
+    62.6831
+   ],
+   "mf_morgen": 30.66,
+   "kk_morgen": 45.73,
+   "tv_morgen": 15.59,
+   "avganger_morgen": 6.78,
+   "mf_kveld": 22.12,
+   "kk_kveld": 33.57,
+   "tv_kveld": 10.68,
+   "avganger_kveld": 2.38,
+   "mf_lordag": 21.7,
+   "kk_lordag": 33.19,
+   "tv_lordag": 10.2,
+   "avganger_lordag": 2.33,
+   "karakter_dk_morgen": "D",
+   "karakter_no_morgen": "E",
+   "karakter_dk_kveld": "E",
+   "karakter_no_kveld": "E",
+   "karakter_dk_lordag": "F",
+   "karakter_no_lordag": "E",
+   "andel_god_tilgang": 0.6083,
+   "gini_morgen": 0.3791
+  },
+  {
+   "nr": "39",
+   "navn": "Vestfold",
+   "befolkning": 257770,
+   "bbox": [
+    9.7719,
+    58.9658,
+    10.52,
+    59.6737
+   ],
+   "mf_morgen": 43.85,
+   "kk_morgen": 68.27,
+   "tv_morgen": 19.43,
+   "avganger_morgen": 11.42,
+   "mf_kveld": 34.02,
+   "kk_kveld": 55.83,
+   "tv_kveld": 12.22,
+   "avganger_kveld": 3.8,
+   "mf_lordag": 37.83,
+   "kk_lordag": 60.46,
+   "tv_lordag": 15.2,
+   "avganger_lordag": 5.61,
+   "karakter_dk_morgen": "D",
+   "karakter_no_morgen": "D",
+   "karakter_dk_kveld": "D",
+   "karakter_no_kveld": "E",
+   "karakter_dk_lordag": "D",
+   "karakter_no_lordag": "E",
+   "andel_god_tilgang": 0.8118,
+   "gini_morgen": 0.1906
+  },
+  {
+   "nr": "40",
+   "navn": "Telemark",
+   "befolkning": 177702,
+   "bbox": [
+    7.1924,
+    58.772,
+    9.8739,
+    60.1388
+   ],
+   "mf_morgen": 42.45,
+   "kk_morgen": 58.74,
+   "tv_morgen": 26.15,
+   "avganger_morgen": 10.98,
+   "mf_kveld": 34.52,
+   "kk_kveld": 50.07,
+   "tv_kveld": 18.97,
+   "avganger_kveld": 3.98,
+   "mf_lordag": 33.84,
+   "kk_lordag": 49.49,
+   "tv_lordag": 18.19,
+   "avganger_lordag": 3.53,
+   "karakter_dk_morgen": "D",
+   "karakter_no_morgen": "D",
+   "karakter_dk_kveld": "D",
+   "karakter_no_kveld": "E",
+   "karakter_dk_lordag": "D",
+   "karakter_no_lordag": "E",
+   "andel_god_tilgang": 0.754,
+   "gini_morgen": 0.3127
+  },
+  {
+   "nr": "42",
+   "navn": "Agder",
+   "befolkning": 321825,
+   "bbox": [
+    6.3902,
+    57.9819,
+    9.3477,
+    59.641
+   ],
+   "mf_morgen": 46.74,
+   "kk_morgen": 63.91,
+   "tv_morgen": 29.56,
+   "avganger_morgen": 12.9,
+   "mf_kveld": 36.45,
+   "kk_kveld": 52.02,
+   "tv_kveld": 20.88,
+   "avganger_kveld": 6.08,
+   "mf_lordag": 37.73,
+   "kk_lordag": 53.63,
+   "tv_lordag": 21.82,
+   "avganger_lordag": 5.99,
+   "karakter_dk_morgen": "C",
+   "karakter_no_morgen": "D",
+   "karakter_dk_kveld": "D",
+   "karakter_no_kveld": "E",
+   "karakter_dk_lordag": "D",
+   "karakter_no_lordag": "E",
+   "andel_god_tilgang": 0.7416,
+   "gini_morgen": 0.268
+  },
+  {
+   "nr": "46",
+   "navn": "Vestland",
+   "befolkning": 654451,
+   "bbox": [
+    4.5123,
+    59.4786,
+    8.0359,
+    62.1997
+   ],
+   "mf_morgen": 49.22,
+   "kk_morgen": 67.61,
+   "tv_morgen": 30.83,
+   "avganger_morgen": 22.36,
+   "mf_kveld": 41.88,
+   "kk_kveld": 58.98,
+   "tv_kveld": 24.77,
+   "avganger_kveld": 11.91,
+   "mf_lordag": 42.06,
+   "kk_lordag": 59.18,
+   "tv_lordag": 24.94,
+   "avganger_lordag": 10.65,
+   "karakter_dk_morgen": "C",
+   "karakter_no_morgen": "D",
+   "karakter_dk_kveld": "D",
+   "karakter_no_kveld": "D",
+   "karakter_dk_lordag": "D",
+   "karakter_no_lordag": "D",
+   "andel_god_tilgang": 0.8275,
+   "gini_morgen": 0.3119
+  },
+  {
+   "nr": "50",
+   "navn": "Trøndelag - Trööndelage",
+   "befolkning": 486084,
+   "bbox": [
+    8.164,
+    62.3078,
+    14.0935,
+    65.1241
+   ],
+   "mf_morgen": 49.03,
+   "kk_morgen": 64.52,
+   "tv_morgen": 33.55,
+   "avganger_morgen": 23.65,
+   "mf_kveld": 42.58,
+   "kk_kveld": 56.6,
+   "tv_kveld": 28.55,
+   "avganger_kveld": 14.85,
+   "mf_lordag": 42.12,
+   "kk_lordag": 56.12,
+   "tv_lordag": 28.13,
+   "avganger_lordag": 11.52,
+   "karakter_dk_morgen": "C",
+   "karakter_no_morgen": "D",
+   "karakter_dk_kveld": "D",
+   "karakter_no_kveld": "D",
+   "karakter_dk_lordag": "D",
+   "karakter_no_lordag": "D",
+   "andel_god_tilgang": 0.7052,
+   "gini_morgen": 0.329
+  },
+  {
+   "nr": "55",
+   "navn": "Troms - Romsa - Tromssa",
+   "befolkning": 170225,
+   "bbox": [
+    15.6669,
+    68.417,
+    22.215,
+    70.2486
+   ],
+   "mf_morgen": 46.3,
+   "kk_morgen": 54.69,
+   "tv_morgen": 37.92,
+   "avganger_morgen": 14.71,
+   "mf_kveld": 40.28,
+   "kk_kveld": 48.52,
+   "tv_kveld": 32.04,
+   "avganger_kveld": 7.0,
+   "mf_lordag": 39.61,
+   "kk_lordag": 47.62,
+   "tv_lordag": 31.61,
+   "avganger_lordag": 5.42,
+   "karakter_dk_morgen": "C",
+   "karakter_no_morgen": "D",
+   "karakter_dk_kveld": "D",
+   "karakter_no_kveld": "D",
+   "karakter_dk_lordag": "D",
+   "karakter_no_lordag": "D",
+   "andel_god_tilgang": 0.7623,
+   "gini_morgen": 0.3651
+  },
+  {
+   "nr": "56",
+   "navn": "Finnmark - Finnmárku - Finmarkku",
+   "befolkning": 74893,
+   "bbox": [
+    21.2321,
+    68.7498,
+    31.1269,
+    71.1146
+   ],
+   "mf_morgen": 32.78,
+   "kk_morgen": 43.53,
+   "tv_morgen": 22.04,
+   "avganger_morgen": 3.85,
+   "mf_kveld": 26.4,
+   "kk_kveld": 36.38,
+   "tv_kveld": 16.42,
+   "avganger_kveld": 1.25,
+   "mf_lordag": 24.43,
+   "kk_lordag": 34.39,
+   "tv_lordag": 14.47,
+   "avganger_lordag": 0.77,
+   "karakter_dk_morgen": "D",
+   "karakter_no_morgen": "E",
+   "karakter_dk_kveld": "E",
+   "karakter_no_kveld": "E",
+   "karakter_dk_lordag": "E",
+   "karakter_no_lordag": "E",
+   "andel_god_tilgang": 0.5448,
+   "gini_morgen": 0.3496
+  }
+ ],
+ "kilder": [
+  {
+   "kilde": "Entur – nasjonal rutetabell (GTFS)",
+   "url": "https://storage.googleapis.com/marduk-production/outbound/gtfs/rb_norway-aggregated-gtfs.zip",
+   "fil": "rb_norway-aggregated-gtfs.zip",
+   "lisens": "NLOD 2.0",
+   "registrert": "2026-10-22T23:07:21+00:00",
+   "bytes": 536518340,
+   "sha256": "2509daa539b2619e9469992e88916618d9fbb2c44de2e0a61509637b3267b950",
+   "http": {
+    "Content-Type": "application/octet-stream",
+    "Last-Modified": "Thu, 22 Oct 2026 22:49:48 GMT",
+    "ETag": "\"859bc84dc525149b4e4a747b66c87ff8\"",
+    "Content-Length": "536518340"
+   }
+  },
+  {
+   "kilde": "OpenStreetMap Norge (Geofabrik)",
+   "url": "https://download.geofabrik.de/europe/norway-latest.osm.pbf",
+   "fil": "norway-latest.osm.pbf",
+   "lisens": "ODbL 1.0",
+   "registrert": "2026-10-22T23:07:21+00:00",
+   "bytes": 1377625427,
+   "sha256": "f4b1c927ac80b7def41915db1d8ccc07a274cd5a91b97a775d681d5e4d5204af",
+   "http": {
+    "Content-Length": "1377625427",
+    "Content-Type": "application/octet-stream",
+    "Last-Modified": "Tue, 20 Oct 2026 23:23:39 GMT",
+    "ETag": "\"521ce553-65e4debaf8f6f\""
+   }
+  },
+  {
+   "kilde": "SSB – befolkning på rutenett 250 m, 2025",
+   "url": "https://nedlasting.geonorge.no/geonorge/Befolkning/BefolkningsstatistikkRutenett250m2025/GML/Befolkning_0000_Norge_25833_BefolkningsstatistikkRutenett250m2025_GML.zip",
+   "fil": "rutenett250m_2025.zip",
+   "lisens": "NLOD 2.0 / CC BY 4.0 (SSB)",
+   "registrert": "2026-10-22T23:07:24+00:00",
+   "bytes": 42231754,
+   "sha256": "c58c984d7a1dcffada0d3ed5f70e82393a417e2ae555368b2ae9b4954a372113",
+   "http": {
+    "Last-Modified": "Mon, 06 Oct 2025 10:34:33 GMT",
+    "ETag": "\"68e39b39-28467ca\"",
+    "Content-Length": "42231754",
+    "Content-Type": "application/zip"
+   }
+  },
+  {
+   "kilde": "SSB – befolkning på rutenett 1 km, 2025",
+   "url": "https://nedlasting.geonorge.no/geonorge/Befolkning/BefolkningsstatistikkRutenett1km2025/GML/Befolkning_0000_Norge_25833_BefolkningsstatistikkRutenett1km2025_GML.zip",
+   "fil": "rutenett1km_2025.zip",
+   "lisens": "NLOD 2.0 / CC BY 4.0 (SSB)",
+   "registrert": "2026-10-22T23:07:24+00:00",
+   "bytes": 10940064,
+   "sha256": "a2407c97ea95a73684eb82fdd8499fe169d43c35ce55b9e394088434f9093167",
+   "http": {
+    "Last-Modified": "Mon, 06 Oct 2025 09:15:22 GMT",
+    "ETag": "\"68e388aa-a6eea0\"",
+    "Content-Length": "10940064",
+    "Content-Type": "application/zip"
+   }
+  },
+  {
+   "kilde": "Brønnøysundregistrene – alle underenheter (CSV)",
+   "url": "https://data.brreg.no/enhetsregisteret/api/underenheter/lastned/csv",
+   "fil": "underenheter.csv.gz",
+   "lisens": "NLOD 2.0",
+   "registrert": "2026-10-22T23:07:45+00:00",
+   "bytes": 61659570,
+   "sha256": "21306fbd1c1f0543967fc77d6698afabbe7b56240d735846dd193c62fccc6ba5",
+   "http": {
+    "Last-Modified": "Thu Oct 22 04:32:04 CEST 2026",
+    "ETag": "19e2e609fbac4266c62c4531850fe0db",
+    "Content-Length": "61659570",
+    "Content-Type": "application/vnd.brreg.enhetsregisteret.underenhet.v2+gzip;charset=UTF-8"
+   }
+  },
+  {
+   "kilde": "Kartverket – Matrikkelen adresser (CSV, EPSG:25833)",
+   "url": "https://nedlasting.geonorge.no/geonorge/Basisdata/MatrikkelenAdresse/CSV/Basisdata_0000_Norge_25833_MatrikkelenAdresse_CSV.zip",
+   "fil": "adresser_25833.zip",
+   "lisens": "CC BY 4.0 (Kartverket)",
+   "registrert": "2026-10-22T23:07:50+00:00",
+   "bytes": 157053434,
+   "sha256": "921de373df3d4d42353244090418240e92051a3dd82e4f6233336cb21d51e47a",
+   "http": {
+    "Last-Modified": "Sat, 17 Oct 2026 14:50:50 GMT",
+    "ETag": "\"6ad38b4a-95c71fa\"",
+    "Content-Length": "157053434",
+    "Content-Type": "application/zip"
+   }
+  },
+  {
+   "kilde": "SSB/Kartverket – statistiske enheter grunnkretser",
+   "url": "https://nedlasting.geonorge.no/api/download/order/e08e72d0-6f6f-4abf-b74f-a5474ad2bc56/8962b383-c385-4410-aca1-cbbf26f5d7e9",
+   "fil": "grunnkretser_25833_geojson.zip",
+   "lisens": "NLOD 2.0",
+   "registrert": "2026-10-22T23:07:53+00:00",
+   "bytes": 53985409,
+   "sha256": "5679eb0eaff40a524d526d718c7423e4971f5495c2b1a6c82bd15dd92f287dcb",
+   "http": {
+    "Last-Modified": "Thu, 11 Dec 2025 13:27:18 GMT",
+    "ETag": "\"693ac6b6-337c081\"",
+    "Content-Length": "53985409",
+    "Content-Type": "application/zip"
+   }
+  },
+  {
+   "kilde": "Udir – NSR (aktive enheter med detaljer)",
+   "url": "https://data-nsr.udir.no/v4/enheter",
+   "fil": "nsr.jsonl",
+   "lisens": "NLOD 2.0",
+   "registrert": "2026-10-22T23:08:38+00:00",
+   "bytes": 8213901,
+   "sha256": "585e4b667c8795c71b8fd604092e074e9e28b42488a3b8ff6d7a3d4e1e5cf8ef",
+   "http": {}
+  },
+  {
+   "kilde": "Udir – NBR (aktive enheter med detaljer)",
+   "url": "https://data-nbr.udir.no/v4/enheter",
+   "fil": "nbr.jsonl",
+   "lisens": "NLOD 2.0",
+   "registrert": "2026-10-22T23:09:42+00:00",
+   "bytes": 12816053,
+   "sha256": "087ce04848e0b63a946e78b094d78ff93ca27ea8c000fb19b7d91087900dc52c",
+   "http": {}
+  }
+ ]
+}
