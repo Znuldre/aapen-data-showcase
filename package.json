@@ -9,6 +9,7 @@
   "scripts": {
     "test": "npm test --workspaces --if-present",
     "dev:atlas": "npm run dev -w @showcase/mobilitetsatlas-web",
-    "build:atlas": "npm run build -w @showcase/mobilitetsatlas-web"
+    "build:atlas": "npm run build -w @showcase/mobilitetsatlas-web",
+    "publiser:atlas": "npm run publiser -w @showcase/mobilitetsatlas-web"
   }
 }

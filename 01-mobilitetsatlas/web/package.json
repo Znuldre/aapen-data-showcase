@@ -10,6 +10,7 @@
     "prebuild": "npm run kopier-worker",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
+    "publiser": "node scripts/publiser.mjs",
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {

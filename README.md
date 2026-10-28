@@ -14,6 +14,8 @@ Prototyper som kobler norske åpne data – kollektivtrafikk, vær, statistikk, 
 | `06-etableringskartet` | Etableringskartet: nedslagsfelt og konkurrenter | Planlagt |
 | `07-uvaerskartet` | Uværskartet: hvem og hva rammes av farevarsler? | Planlagt |
 
+Mobilitetsatlaset ligger på https://znuldre.github.io/aapen-data-showcase/ og virker på mobil, nettbrett og PC.
+
 ## Struktur
 
 ```

@@ -10,7 +10,7 @@ Strukturen følger [Danmarks Mobilitetsatlas](https://mobilitetsatlas.dk/) (Beta
 
 ## Status
 
-v0.1 «Kollektiv», oktober 2026. Alle tre tidsvinduene er beregnet for hele landet og vises i appen: hverdag 07–08, hverdag 19–20 og lørdag 10–11.
+v0.1 «Kollektiv», oktober 2026. Alle tre tidsvinduene er beregnet for hele landet og vises i appen: hverdag 07–08, hverdag 19–20 og lørdag 10–11. Appen ligger på https://znuldre.github.io/aapen-data-showcase/.
 
 ## Hovedtall, hverdag 07–08
 
@@ -75,3 +75,13 @@ npm run dev:atlas
 ```
 
 Åpne http://localhost:5173. Live-avganger i «ditt tall» krever `ENTUR_CLIENT_NAME` i `.env`.
+
+## Publisere på GitHub Pages
+
+Dataene i `web/public/data` er for store for main og tar et døgn å beregne, så nettstedet bygges lokalt og ikke i CI. Etter at pipelinen er kjørt til og med steg 6:
+
+```
+npm run publiser:atlas
+```
+
+Skriptet bygger appen for adressen til repoet og erstatter grenen `gh-pages` med resultatet. Grenen har bare én commit, så gamle data hoper seg ikke opp. Byggingen tar med `ENTUR_CLIENT_NAME` fra `.env`, slik at live-avgangene virker også på nettsiden. GitHub Pages oppdaterer siden i løpet av et par minutter.
