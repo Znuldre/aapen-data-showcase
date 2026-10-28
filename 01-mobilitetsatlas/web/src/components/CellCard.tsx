@@ -113,24 +113,26 @@ export function CellCard({ meta, sel, vindu, skala, kommune }: Props) {
       </p>
 
       <h3>Hva du når</h3>
-      <table className="reach">
-        <thead>
-          <tr>
-            <th scope="col">Mål</th>
-            <th scope="col" colSpan={3}>Kollektiv (30 / 60 / 90 min)</th>
-            <th scope="col" colSpan={3}>Bil (30 / 60 / 90 min)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {KATEGORIER.map((k) => (
-            <tr key={k}>
-              <th scope="row">{meta.kategorier[k].navn}</th>
-              {[30, 60, 90].map((g) => <td key={`k${g}`}>{fmt(num(det[`kol_${k}_${g}_${vindu}`]))}</td>)}
-              {[30, 60, 90].map((g) => <td key={`b${g}`} className="car">{fmt(num(det[`bil_${k}_${g}`]))}</td>)}
+      <div className="table-scroll">
+        <table className="reach">
+          <thead>
+            <tr>
+              <th scope="col">Mål</th>
+              <th scope="col" colSpan={3}>Kollektiv (30 / 60 / 90 min)</th>
+              <th scope="col" colSpan={3}>Bil (30 / 60 / 90 min)</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {KATEGORIER.map((k) => (
+              <tr key={k}>
+                <th scope="row">{meta.kategorier[k].navn}</th>
+                {[30, 60, 90].map((g) => <td key={`k${g}`}>{fmt(num(det[`kol_${k}_${g}_${vindu}`]))}</td>)}
+                {[30, 60, 90].map((g) => <td key={`b${g}`} className="car">{fmt(num(det[`bil_${k}_${g}`]))}</td>)}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <details className="sensitivity">
         <summary>Juster vektene (følsomhet)</summary>

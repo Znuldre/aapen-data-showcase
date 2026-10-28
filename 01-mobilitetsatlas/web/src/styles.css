@@ -162,7 +162,7 @@ main:has(> .page) { overflow-y: auto; }
 .maplibregl-popup.tooltip .maplibregl-popup-tip { display: none; }
 
 @media (max-width: 860px) {
-  .atlas { grid-template-columns: 1fr; grid-template-rows: 52vh auto; }
+  .atlas { grid-template-columns: minmax(0, 1fr); grid-template-rows: 52vh auto; } /* kolonnen skal ikke vokse etter brede tabeller */
   .map-wrap { grid-row: 1; }
   .sidebar { grid-row: 2; border-right: 0; border-top: 1px solid var(--line); overflow: visible; }
   main.atlas { overflow-y: auto; }
