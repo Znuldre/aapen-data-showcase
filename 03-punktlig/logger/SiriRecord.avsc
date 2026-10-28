@@ -1,0 +1,391 @@
+{"name": "org.entur.avro.realtime.siri.model.SiriRecord", "type": "record", "fields": [
+  {"name": "version", "type": "string"},
+  {"name": "serviceDelivery", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.ServiceDeliveryRecord", "type": "record", "fields": [
+    {"name": "responseTimestamp", "type": ["null", "string"]},
+    {"name": "producerRef", "type": ["null", "string"]},
+    {"name": "requestMessageRef", "type": ["null", "string"]},
+    {"name": "moreData", "type": ["null", "boolean"]},
+    {"name": "estimatedTimetableDeliveries", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.EstimatedTimetableDeliveryRecord", "type": "record", "fields": [
+      {"name": "version", "type": ["null", "string"]},
+      {"name": "responseTimestamp", "type": ["null", "string"]},
+      {"name": "estimatedJourneyVersionFrames", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.EstimatedJourneyVersionFrameRecord", "type": "record", "fields": [
+        {"name": "recordedAtTime", "type": ["null", "string"]},
+        {"name": "estimatedVehicleJourneys", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.EstimatedVehicleJourneyRecord", "type": "record", "fields": [
+          {"name": "recordedAtTime", "type": ["null", "string"]},
+          {"name": "lineRef", "type": ["null", "string"]},
+          {"name": "directionRef", "type": ["null", "string"]},
+          {"name": "datedVehicleJourneyRef", "type": ["null", "string"]},
+          {"name": "framedVehicleJourneyRef", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.FramedVehicleJourneyRefRecord", "type": "record", "fields": [
+            {"name": "dataFrameRef", "type": ["null", "string"]},
+            {"name": "datedVehicleJourneyRef", "type": ["null", "string"]}
+          ]}]},
+          {"name": "estimatedVehicleJourneyCode", "type": ["null", "string"]},
+          {"name": "extraJourney", "type": ["null", "boolean"]},
+          {"name": "cancellation", "type": ["null", "boolean"]},
+          {"name": "journeyPatternRef", "type": ["null", "string"]},
+          {"name": "vehicleModes", "type": {"type": "array", "items": "string"}},
+          {"name": "routeRef", "type": ["null", "string"]},
+          {"name": "publishedLineNames", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.TranslatedStringRecord", "type": "record", "fields": [
+            {"name": "value", "type": ["null", "string"]},
+            {"name": "language", "type": ["null", "string"]}
+          ]}}},
+          {"name": "destinationDisplayAtOrigins", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}},
+          {"name": "groupOfLinesRef", "type": ["null", "string"]},
+          {"name": "externalLineRef", "type": ["null", "string"]},
+          {"name": "originNames", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}},
+          {"name": "originRef", "type": ["null", "string"]},
+          {"name": "destinationNames", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}},
+          {"name": "destinationRef", "type": ["null", "string"]},
+          {"name": "operatorRef", "type": ["null", "string"]},
+          {"name": "originAimedDepartureTime", "type": ["null", "string"]},
+          {"name": "destinationAimedArrivalTime", "type": ["null", "string"]},
+          {"name": "vehicleFeatureRefs", "type": {"type": "array", "items": "string"}},
+          {"name": "productCategoryRef", "type": ["null", "string"]},
+          {"name": "serviceFeatureRefs", "type": {"type": "array", "items": "string"}},
+          {"name": "monitored", "type": ["null", "boolean"]},
+          {"name": "predictionInaccurate", "type": ["null", "boolean"]},
+          {"name": "dataSource", "type": ["null", "string"]},
+          {"name": "occupancy", "type": ["null", "string"]},
+          {"name": "blockRef", "type": ["null", "string"]},
+          {"name": "vehicleJourneyRef", "type": ["null", "string"]},
+          {"name": "additionalVehicleJourneyRef", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.FramedVehicleJourneyRefRecord"}},
+          {"name": "vehicleRef", "type": ["null", "string"]},
+          {"name": "recordedCalls", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.RecordedCallRecord", "type": "record", "fields": [
+            {"name": "stopPointRef", "type": ["null", "string"]},
+            {"name": "order", "type": ["null", "int"]},
+            {"name": "stopPointNames", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}},
+            {"name": "extraCall", "type": ["null", "boolean"]},
+            {"name": "cancellation", "type": ["null", "boolean"]},
+            {"name": "predictionInaccurate", "type": ["null", "boolean"]},
+            {"name": "occupancy", "type": ["null", "string"]},
+            {"name": "requestStop", "type": ["null", "boolean"]},
+            {"name": "destinationDisplays", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}},
+            {"name": "aimedArrivalTime", "type": ["null", "string"]},
+            {"name": "expectedArrivalTime", "type": ["null", "string"]},
+            {"name": "actualArrivalTime", "type": ["null", "string"]},
+            {"name": "arrivalPlatformName", "type": ["null", "string"]},
+            {"name": "arrivalStatus", "type": ["null", "string"]},
+            {"name": "arrivalBoardingActivity", "type": ["null", "string"]},
+            {"name": "arrivalStopAssignments", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.StopAssignmentRecord", "type": "record", "fields": [
+              {"name": "aimedQuayRef", "type": ["null", "string"]},
+              {"name": "expectedQuayRef", "type": ["null", "string"]}
+            ]}}},
+            {"name": "aimedDepartureTime", "type": ["null", "string"]},
+            {"name": "expectedDepartureTime", "type": ["null", "string"]},
+            {"name": "actualDepartureTime", "type": ["null", "string"]},
+            {"name": "departurePlatformName", "type": ["null", "string"]},
+            {"name": "departureStatus", "type": ["null", "string"]},
+            {"name": "departureBoardingActivity", "type": ["null", "string"]},
+            {"name": "departureStopAssignments", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.StopAssignmentRecord"}},
+            {"name": "recordedDepartureOccupancies", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.VehicleOccupancyRecord", "type": "record", "fields": [
+              {"name": "compoundTrainRef", "type": ["null", "string"]},
+              {"name": "trainRef", "type": ["null", "string"]},
+              {"name": "trainComponentRef", "type": ["null", "string"]},
+              {"name": "entranceToVehicleRef", "type": ["null", "string"]},
+              {"name": "passengerCategory", "type": ["null", "string"]},
+              {"name": "occupancyLevel", "type": ["null", "string"]},
+              {"name": "occupancyPercentage", "type": ["null", "double"]},
+              {"name": "alightingCount", "type": ["null", "int"]},
+              {"name": "boardingCount", "type": ["null", "int"]},
+              {"name": "onboardCount", "type": ["null", "int"]},
+              {"name": "pushchairsOnboardCount", "type": ["null", "int"]},
+              {"name": "wheelchairsOnboardCount", "type": ["null", "int"]},
+              {"name": "pramsOnboardCount", "type": ["null", "int"]},
+              {"name": "bicycleOnboardCount", "type": ["null", "int"]},
+              {"name": "totalNumberOfReservedSeats", "type": ["null", "int"]}
+            ]}}},
+            {"name": "recordedDepartureCapacities", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.PassengerCapacityRecord", "type": "record", "fields": [
+              {"name": "compoundTrainRef", "type": ["null", "string"]},
+              {"name": "trainRef", "type": ["null", "string"]},
+              {"name": "trainComponentRef", "type": ["null", "string"]},
+              {"name": "entranceToVehicleRef", "type": ["null", "string"]},
+              {"name": "passengerCategory", "type": ["null", "string"]},
+              {"name": "totalCapacity", "type": ["null", "int"]},
+              {"name": "seatingCapacity", "type": ["null", "int"]},
+              {"name": "standingCapacity", "type": ["null", "int"]},
+              {"name": "pushchairCapacity", "type": ["null", "int"]},
+              {"name": "wheelchairPlaceCapacity", "type": ["null", "int"]},
+              {"name": "pramPlaceCapacity", "type": ["null", "int"]},
+              {"name": "bicycleRackCapacity", "type": ["null", "int"]}
+            ]}}}
+          ]}}},
+          {"name": "estimatedCalls", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.EstimatedCallRecord", "type": "record", "fields": [
+            {"name": "stopPointRef", "type": ["null", "string"]},
+            {"name": "order", "type": ["null", "int"]},
+            {"name": "stopPointNames", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}},
+            {"name": "extraCall", "type": ["null", "boolean"]},
+            {"name": "cancellation", "type": ["null", "boolean"]},
+            {"name": "predictionInaccurate", "type": ["null", "boolean"]},
+            {"name": "occupancy", "type": ["null", "string"]},
+            {"name": "requestStop", "type": ["null", "boolean"]},
+            {"name": "destinationDisplays", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}},
+            {"name": "aimedArrivalTime", "type": ["null", "string"]},
+            {"name": "expectedArrivalTime", "type": ["null", "string"]},
+            {"name": "arrivalPlatformName", "type": ["null", "string"]},
+            {"name": "arrivalStatus", "type": ["null", "string"]},
+            {"name": "arrivalBoardingActivity", "type": ["null", "string"]},
+            {"name": "arrivalStopAssignments", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.StopAssignmentRecord"}},
+            {"name": "aimedDepartureTime", "type": ["null", "string"]},
+            {"name": "expectedDepartureTime", "type": ["null", "string"]},
+            {"name": "departurePlatformName", "type": ["null", "string"]},
+            {"name": "departureStatus", "type": ["null", "string"]},
+            {"name": "departureBoardingActivity", "type": ["null", "string"]},
+            {"name": "departureStopAssignments", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.StopAssignmentRecord"}},
+            {"name": "expectedDepartureOccupancies", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.VehicleOccupancyRecord"}},
+            {"name": "expectedDepartureCapacities", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.PassengerCapacityRecord"}}
+          ]}}},
+          {"name": "isCompleteStopSequence", "type": ["null", "boolean"]}
+        ]}}}
+      ]}}}
+    ]}}},
+    {"name": "situationExchangeDeliveries", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.SituationExchangeDeliveryRecord", "type": "record", "fields": [
+      {"name": "version", "type": ["null", "string"]},
+      {"name": "responseTimestamp", "type": ["null", "string"]},
+      {"name": "situations", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.PtSituationElementRecord", "type": "record", "fields": [
+        {"name": "creationTime", "type": ["null", "string"]},
+        {"name": "participantRef", "type": ["null", "string"]},
+        {"name": "situationNumber", "type": ["null", "string"]},
+        {"name": "version", "type": ["null", "int"]},
+        {"name": "source", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.SourceRecord", "type": "record", "fields": [
+          {"name": "sourceType", "type": ["null", "string"]}
+        ]}]},
+        {"name": "versionedAtTime", "type": ["null", "string"]},
+        {"name": "progress", "type": ["null", "string"]},
+        {"name": "validityPeriods", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.ValidityPeriodRecord", "type": "record", "fields": [
+          {"name": "startTime", "type": ["null", "string"]},
+          {"name": "endTime", "type": ["null", "string"]}
+        ]}}},
+        {"name": "undefinedReason", "type": ["null", "string"]},
+        {"name": "severity", "type": ["null", "string"]},
+        {"name": "priority", "type": ["null", "int"]},
+        {"name": "reportType", "type": "string"},
+        {"name": "keywords", "type": {"type": "array", "items": "string"}},
+        {"name": "planned", "type": ["null", "boolean"]},
+        {"name": "summaries", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}},
+        {"name": "descriptions", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}},
+        {"name": "details", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}},
+        {"name": "advices", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}},
+        {"name": "infoLinks", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.InfoLinkRecord", "type": "record", "fields": [
+          {"name": "labels", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}},
+          {"name": "uri", "type": ["null", "string"]}
+        ]}}},
+        {"name": "affects", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.AffectsRecord", "type": "record", "fields": [
+          {"name": "networks", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.AffectedNetworkRecord", "type": "record", "fields": [
+            {"name": "affectedOperators", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.AffectedOperatorRecord", "type": "record", "fields": [
+              {"name": "operatorRef", "type": ["null", "string"]},
+              {"name": "operatorNames", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}}
+            ]}}},
+            {"name": "networkRef", "type": ["null", "string"]},
+            {"name": "vehicleMode", "type": ["null", "string"]},
+            {"name": "airSubmode", "type": ["null", "string"]},
+            {"name": "busSubmode", "type": ["null", "string"]},
+            {"name": "coachSubmode", "type": ["null", "string"]},
+            {"name": "metroSubmode", "type": ["null", "string"]},
+            {"name": "railSubmode", "type": ["null", "string"]},
+            {"name": "tramSubmode", "type": ["null", "string"]},
+            {"name": "waterSubmode", "type": ["null", "string"]},
+            {"name": "affectedLines", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.AffectedLineRecord", "type": "record", "fields": [
+              {"name": "lineRef", "type": ["null", "string"]},
+              {"name": "routes", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.AffectedRouteRecord", "type": "record", "fields": [
+                {"name": "routeRef", "type": ["null", "string"]},
+                {"name": "stopPoints", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.StopPointsRecord", "type": "record", "fields": [
+                  {"name": "affectedOnly", "type": ["null", "boolean"]},
+                  {"name": "stopPoints", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.AffectedStopPointRecord", "type": "record", "fields": [
+                    {"name": "stopPointRef", "type": ["null", "string"]},
+                    {"name": "stopPointNames", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}},
+                    {"name": "stopConditions", "type": {"type": "array", "items": "string"}}
+                  ]}}}
+                ]}]},
+                {"name": "sections", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.AffectedSectionRecord", "type": "record", "fields": [
+                  {"name": "indirectSectionRef", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.IndirectSectionRefRecord", "type": "record", "fields": [
+                    {"name": "firstQuayRef", "type": ["null", "string"]},
+                    {"name": "lastQuayRef", "type": ["null", "string"]}
+                  ]}]}
+                ]}}}
+              ]}}},
+              {"name": "sections", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.AffectedSectionRecord"}}
+            ]}}},
+            {"name": "allLines", "type": ["null", "string"]}
+          ]}}},
+          {"name": "stopPlaces", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.AffectedStopPlaceRecord", "type": "record", "fields": [
+            {"name": "accessibilityAssessment", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.AccessibilityAssessmentRecord", "type": "record", "fields": [
+              {"name": "mobilityImpairedAccess", "type": ["null", "boolean"]},
+              {"name": "limitations", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.AccessibilityLimitationRecord", "type": "record", "fields": [
+                {"name": "wheelchairAccess", "type": ["null", "string"]},
+                {"name": "stepFreeAccess", "type": ["null", "string"]},
+                {"name": "escalatorFreeAccess", "type": ["null", "string"]},
+                {"name": "liftFreeAccess", "type": ["null", "string"]}
+              ]}}}
+            ]}]},
+            {"name": "stopPlaceRef", "type": ["null", "string"]},
+            {"name": "placeNames", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}},
+            {"name": "affectedComponent", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.AffectedComponentsRecord", "type": "record", "fields": [
+              {"name": "components", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.AffectedStopPlaceComponentRecord", "type": "record", "fields": [
+                {"name": "componentRef", "type": ["null", "string"]},
+                {"name": "componentType", "type": ["null", "string"]},
+                {"name": "accessFeatureType", "type": ["null", "string"]}
+              ]}}}
+            ]}]}
+          ]}}},
+          {"name": "stopPoints", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.AffectedStopPointRecord"}},
+          {"name": "vehicleJourneys", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.AffectedVehicleJourneyRecord", "type": "record", "fields": [
+            {"name": "vehicleJourneyRefs", "type": {"type": "array", "items": "string"}},
+            {"name": "framedVehicleJourneyRef", "type": ["null", "org.entur.avro.realtime.siri.model.FramedVehicleJourneyRefRecord"]},
+            {"name": "datedVehicleJourneyRefs", "type": {"type": "array", "items": "string"}},
+            {"name": "operator", "type": ["null", "org.entur.avro.realtime.siri.model.AffectedOperatorRecord"]},
+            {"name": "lineRef", "type": ["null", "string"]},
+            {"name": "routes", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.AffectedRouteRecord"}},
+            {"name": "originAimedDepartureTime", "type": ["null", "string"]}
+          ]}}}
+        ]}]},
+        {"name": "consequences", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.ConsequenceRecord", "type": "record", "fields": [
+          {"name": "advice", "type": {"name": "org.entur.avro.realtime.siri.model.AdviceRecord", "type": "record", "fields": [
+            {"name": "adviceType", "type": "string"}
+          ]}}
+        ]}}}
+      ]}}}
+    ]}}},
+    {"name": "vehicleMonitoringDeliveries", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.VehicleMonitoringDeliveryRecord", "type": "record", "fields": [
+      {"name": "version", "type": ["null", "string"]},
+      {"name": "responseTimestamp", "type": ["null", "string"]},
+      {"name": "vehicleActivities", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.VehicleActivityRecord", "type": "record", "fields": [
+        {"name": "recordedAtTime", "type": ["null", "string"]},
+        {"name": "validUntilTime", "type": ["null", "string"]},
+        {"name": "progressBetweenStops", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.ProgressBetweenStopsRecord", "type": "record", "fields": [
+          {"name": "percentage", "type": ["null", "double"]},
+          {"name": "linkDistance", "type": ["null", "double"]}
+        ]}]},
+        {"name": "monitoredVehicleJourney", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.MonitoredVehicleJourneyRecord", "type": "record", "fields": [
+          {"name": "lineRef", "type": ["null", "string"]},
+          {"name": "directionRef", "type": ["null", "string"]},
+          {"name": "framedVehicleJourneyRef", "type": ["null", "org.entur.avro.realtime.siri.model.FramedVehicleJourneyRefRecord"]},
+          {"name": "vehicleModes", "type": {"type": "array", "items": "string"}},
+          {"name": "publishedLineNames", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}},
+          {"name": "operatorRef", "type": ["null", "string"]},
+          {"name": "originRef", "type": ["null", "string"]},
+          {"name": "originNames", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}},
+          {"name": "destinationRef", "type": ["null", "string"]},
+          {"name": "destinationNames", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}},
+          {"name": "originAimedDepartureTime", "type": ["null", "string"]},
+          {"name": "destinationAimedArrivalTime", "type": ["null", "string"]},
+          {"name": "monitored", "type": ["null", "boolean"]},
+          {"name": "dataSource", "type": ["null", "string"]},
+          {"name": "vehicleLocation", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.LocationRecord", "type": "record", "fields": [
+            {"name": "srsName", "type": ["null", "string"]},
+            {"name": "longitude", "type": ["null", "double"]},
+            {"name": "latitude", "type": ["null", "double"]}
+          ]}]},
+          {"name": "locationRecordedAtTime", "type": ["null", "string"]},
+          {"name": "bearing", "type": ["null", "float"]},
+          {"name": "velocity", "type": ["null", "int"]},
+          {"name": "occupancy", "type": ["null", "string"]},
+          {"name": "delay", "type": ["null", "string"]},
+          {"name": "inCongestion", "type": ["null", "boolean"]},
+          {"name": "vehicleStatus", "type": ["null", "string"]},
+          {"name": "vehicleJourneyRef", "type": ["null", "string"]},
+          {"name": "vehicleRef", "type": ["null", "string"]},
+          {"name": "monitoredCall", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.CallRecord", "type": "record", "fields": [
+            {"name": "stopPointRef", "type": ["null", "string"]},
+            {"name": "order", "type": ["null", "int"]},
+            {"name": "stopPointNames", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}},
+            {"name": "vehicleAtStop", "type": ["null", "boolean"]},
+            {"name": "vehicleLocationAtStop", "type": ["null", "org.entur.avro.realtime.siri.model.LocationRecord"]},
+            {"name": "destinationDisplays", "type": {"type": "array", "items": "org.entur.avro.realtime.siri.model.TranslatedStringRecord"}}
+          ]}]},
+          {"name": "isCompleteStopSequence", "type": ["null", "boolean"]}
+        ]}]}
+      ]}}}
+    ]}}}
+  ]}]},
+  {"name": "serviceRequest", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.ServiceRequestRecord", "type": "record", "fields": [
+    {"name": "requestTimestamp", "type": ["null", "string"]},
+    {"name": "requestorRef", "type": ["null", "string"]},
+    {"name": "vehicleMonitoringRequests", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.VehicleMonitoringRequestRecord", "type": "record", "fields": [
+      {"name": "version", "type": ["null", "string"]},
+      {"name": "requestTimestamp", "type": ["null", "string"]},
+      {"name": "messageIdentifier", "type": ["null", "string"]}
+    ]}}},
+    {"name": "estimatedTimetableRequests", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.EstimatedTimetableRequestRecord", "type": "record", "fields": [
+      {"name": "version", "type": ["null", "string"]},
+      {"name": "requestTimestamp", "type": ["null", "string"]},
+      {"name": "messageIdentifier", "type": ["null", "string"]},
+      {"name": "previewInterval", "type": ["null", "string"]}
+    ]}}},
+    {"name": "situationExchangeRequests", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.SituationExchangeRequestRecord", "type": "record", "fields": [
+      {"name": "version", "type": ["null", "string"]},
+      {"name": "requestTimestamp", "type": ["null", "string"]},
+      {"name": "messageIdentifier", "type": ["null", "string"]},
+      {"name": "previewInterval", "type": ["null", "string"]}
+    ]}}}
+  ]}]},
+  {"name": "subscriptionRequest", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.SubscriptionRequestRecord", "type": "record", "fields": [
+    {"name": "requestorRef", "type": ["null", "string"]},
+    {"name": "messageIdentifier", "type": ["null", "string"]},
+    {"name": "address", "type": ["null", "string"]},
+    {"name": "consumerAddress", "type": ["null", "string"]},
+    {"name": "requestTimestamp", "type": ["null", "string"]},
+    {"name": "subscriptionContext", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.SubscriptionContextRecord", "type": "record", "fields": [
+      {"name": "heartbeatInterval", "type": ["null", "string"]}
+    ]}]},
+    {"name": "estimatedTimetableSubscriptionRequests", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.EstimatedTimetableSubscriptionRecord", "type": "record", "fields": [
+      {"name": "subscriptionIdentifier", "type": ["null", "string"]},
+      {"name": "initialTerminationTime", "type": ["null", "string"]},
+      {"name": "subscriberRef", "type": ["null", "string"]},
+      {"name": "incrementalUpdates", "type": ["null", "boolean"]},
+      {"name": "changeBeforeUpdates", "type": ["null", "string"]},
+      {"name": "estimatedTimetableRequest", "type": ["null", "org.entur.avro.realtime.siri.model.EstimatedTimetableRequestRecord"]}
+    ]}}},
+    {"name": "situationExchangeSubscriptionRequests", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.SituationExchangeSubscriptionRecord", "type": "record", "fields": [
+      {"name": "subscriptionIdentifier", "type": ["null", "string"]},
+      {"name": "initialTerminationTime", "type": ["null", "string"]},
+      {"name": "subscriberRef", "type": ["null", "string"]},
+      {"name": "incrementalUpdates", "type": ["null", "boolean"]},
+      {"name": "situationExchangeRequest", "type": ["null", "org.entur.avro.realtime.siri.model.SituationExchangeRequestRecord"]}
+    ]}}},
+    {"name": "vehicleMonitoringSubscriptionRequests", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.VehicleMonitoringSubscriptionRecord", "type": "record", "fields": [
+      {"name": "subscriptionIdentifier", "type": ["null", "string"]},
+      {"name": "initialTerminationTime", "type": ["null", "string"]},
+      {"name": "subscriberRef", "type": ["null", "string"]},
+      {"name": "updateInterval", "type": ["null", "string"]},
+      {"name": "incrementalUpdates", "type": ["null", "boolean"]},
+      {"name": "changeBeforeUpdates", "type": ["null", "string"]},
+      {"name": "vehicleMonitoringRequest", "type": ["null", "org.entur.avro.realtime.siri.model.VehicleMonitoringRequestRecord"]}
+    ]}}}
+  ]}]},
+  {"name": "subscriptionResponse", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.SubscriptionResponseRecord", "type": "record", "fields": [
+    {"name": "serviceStartedTime", "type": ["null", "string"]},
+    {"name": "requestMessageRef", "type": ["null", "string"]},
+    {"name": "responderRef", "type": ["null", "string"]},
+    {"name": "responseTimestamp", "type": ["null", "string"]},
+    {"name": "responseStatuses", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.ResponseStatusRecord", "type": "record", "fields": [
+      {"name": "responseTimestamp", "type": ["null", "string"]},
+      {"name": "requestMessageRef", "type": ["null", "string"]},
+      {"name": "subscriptionRef", "type": ["null", "string"]},
+      {"name": "status", "type": ["null", "boolean"]},
+      {"name": "errorText", "type": ["null", "string"]}
+    ]}}}
+  ]}]},
+  {"name": "terminateSubscriptionRequest", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.TerminateSubscriptionRequestRecord", "type": "record", "fields": [
+    {"name": "requestTimestamp", "type": ["null", "string"]},
+    {"name": "subscriptionRefs", "type": {"type": "array", "items": "string"}},
+    {"name": "requestorRef", "type": ["null", "string"]},
+    {"name": "messageIdentifier", "type": ["null", "string"]}
+  ]}]},
+  {"name": "terminateSubscriptionResponse", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.TerminateSubscriptionResponseRecord", "type": "record", "fields": [
+    {"name": "responseTimestamp", "type": ["null", "string"]},
+    {"name": "statuses", "type": {"type": "array", "items": {"name": "org.entur.avro.realtime.siri.model.TerminationResponseStatusRecord", "type": "record", "fields": [
+      {"name": "subscriptionRef", "type": ["null", "string"]},
+      {"name": "responseTimestamp", "type": ["null", "string"]},
+      {"name": "subscriberRef", "type": ["null", "string"]},
+      {"name": "requestMessageRef", "type": ["null", "string"]},
+      {"name": "errorText", "type": ["null", "string"]},
+      {"name": "status", "type": ["null", "boolean"]}
+    ]}}}
+  ]}]},
+  {"name": "heartbeatNotification", "type": ["null", {"name": "org.entur.avro.realtime.siri.model.HeartbeatNotificationRecord", "type": "record", "fields": [
+    {"name": "status", "type": "boolean"},
+    {"name": "serviceStartedTime", "type": ["null", "string"]},
+    {"name": "requestTimestamp", "type": ["null", "string"]},
+    {"name": "producerRef", "type": ["null", "string"]}
+  ]}]}
+]}

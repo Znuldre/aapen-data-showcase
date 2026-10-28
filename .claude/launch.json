@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "mobilitetsatlas",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "-w", "@showcase/mobilitetsatlas-web"],
+      "port": 5173
+    }
+  ]
+}

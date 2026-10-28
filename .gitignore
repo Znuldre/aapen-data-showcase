@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.egg-info/
+*.log
+
+# Rådata og mellomresultater fra pipelinene (store filer, kan lastes ned på nytt)
+**/data/raw/
+**/data/cache/
+# Generert av pipeline-steg 6
+01-mobilitetsatlas/web/public/data/
+# Kopieres fra node_modules av predev/prebuild
+01-mobilitetsatlas/web/public/maplibre-gl-worker.mjs

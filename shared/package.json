@@ -1,0 +1,22 @@
+{
+  "name": "@showcase/shared",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Felles TypeScript-SDK for showcase-produktene: HTTP, Entur, Geonorge, MET og SSB-rutenett",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./ui": "./src/ui/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "proj4": "^2.22.0"
+  },
+  "devDependencies": {
+    "@types/proj4": "^2.5.6",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}

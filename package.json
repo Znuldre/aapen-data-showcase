@@ -1,0 +1,14 @@
+{
+  "name": "aapendata-showcase",
+  "private": true,
+  "description": "Portefølje av prototyper på norske åpne data",
+  "workspaces": [
+    "shared",
+    "01-mobilitetsatlas/web"
+  ],
+  "scripts": {
+    "test": "npm test --workspaces --if-present",
+    "dev:atlas": "npm run dev -w @showcase/mobilitetsatlas-web",
+    "build:atlas": "npm run build -w @showcase/mobilitetsatlas-web"
+  }
+}

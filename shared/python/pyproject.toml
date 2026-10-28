@@ -1,0 +1,25 @@
+[project]
+name = "showcase_shared"
+version = "0.1.0"
+description = "Felles Python-verktøy for showcase-pipelinene: proveniens, SSB-rutenett, GTFS, OSM og tilgjengelighetsindikatorer"
+requires-python = ">=3.10"
+dependencies = [
+  "duckdb>=1.1",
+  "pyarrow>=15",
+  "geopandas>=1.0",
+  "requests>=2.31",
+]
+
+[project.optional-dependencies]
+routing = ["r5py>=1.1"]
+test = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["showcase_shared*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
